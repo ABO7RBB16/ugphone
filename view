@@ -1,0 +1,461 @@
+-- وهذا السكربت على كس امك يا عدواني يا هطف ي اخو الشرمىطة يامحاكي تستخدم ذا السكربت وتطرح التطبيق ياقحبه ياستين محاكي يامزور يلي تزور شات وهمي يخو الدقره وهذا سكربت حقك ياعيل لقحبة يلي تطرح فيه تطبيق وفضحتك وسربت سكربتك
+
+-- والسكربت بدون تشفير حلال عليكم وكسم شكو محاكي يستخدمه فقط نشرته عشان تعرفون حقيقة بعض الصملاويين المحاكيين ونشرته عشان تصملون بماب AFK Target مضاد محاكيات وتزوير يطلع لك معلوماتك مثل علم دولتك و Ping
+
+-- اول عيال قحبة يستخدمون السكربت هذا هم المحاكيات ليون وسكوف وقلادهم وعدواني وشوفو ذول عيالات القحبة بس ينشر السكربت كيف يقعدون يطرحون تطبيق كل شوي زي القحاب ومسويين طالعين منها
+
+-- هذا سكربت عدواني وليس سكربتي ، الحين قلادهم ذا عيل القحبة بس يحصل على السكربت علطول يقعد يستخدمه كل شوي ومستانس به يشيخ كس امك بس تعالو ماب تارقيت يعيال خلو ماب انفنتي للمحاكيات بس
+
+local TweenService = game:GetService("TweenService")
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local LocalPlayer = Players.LocalPlayer
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "CustomMainGui"
+ScreenGui.Parent = CoreGui
+
+local LoadingText = Instance.new("TextLabel")
+LoadingText.Size = UDim2.new(1, 0, 1, 0)
+LoadingText.BackgroundTransparency = 1
+LoadingText.Text = "Script Loading..."
+LoadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingText.TextSize = 50
+LoadingText.Font = Enum.Font.GothamBold
+LoadingText.Parent = ScreenGui
+
+task.wait(5)
+LoadingText:Destroy()
+
+local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
+
+local IntroFrame = Instance.new("Frame")
+IntroFrame.Size = UDim2.new(0, 0, 0, 0)
+IntroFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+IntroFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+IntroFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+IntroFrame.BorderSizePixel = 0
+IntroFrame.Parent = ScreenGui
+
+local IntroCorner = Instance.new("UICorner")
+IntroCorner.CornerRadius = UDim.new(0, 15)
+IntroCorner.Parent = IntroFrame
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 25)
+Title.Position = UDim2.new(0, 0, 0, 6)
+Title.BackgroundTransparency = 1
+Title.Text = "شرح"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 18
+Title.Font = Enum.Font.GothamBold
+Title.Parent = IntroFrame
+
+local Description = Instance.new("TextLabel")
+Description.Size = UDim2.new(1, -16, 0, 175)
+Description.Position = UDim2.new(0, 8, 0, 32)
+Description.BackgroundTransparency = 1
+Description.Text = "هذا سكربت تم صناعتة لكشف او أضهار حقيقة بعض المحاكيات من ضمنهم عدواني الذي يستخدم هذا سكربت ويطرح تطبيق من خلال هذا سكربت ويقول للعالم آنه ليس محاكي ولاكن بل حقيقة محاكي واول من استخدم السكربت هذا هو عدواني وبعض المحاكيات يستخدمونه مثل قلادهم وسكوف وليون وسكربت تم صناعتة لكي أضهر حقيقت عدواني لا اكثر واضهر حقيقت بعض المحاكيات الي يخدعونكم ويقولون لكم انهم ليس محاكيات"
+Description.TextColor3 = Color3.fromRGB(255, 255, 255)
+Description.TextScaled = true
+Description.TextWrapped = true
+Description.Font = Enum.Font.Gotham
+Description.Parent = IntroFrame
+
+local NextBtn = Instance.new("TextButton")
+NextBtn.Size = UDim2.new(0, 100, 0, 30)
+NextBtn.Position = UDim2.new(0.5, -50, 1, -38)
+NextBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NextBtn.Text = "التالي"
+NextBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+NextBtn.TextSize = 15
+NextBtn.Font = Enum.Font.GothamBold
+NextBtn.Parent = IntroFrame
+
+local BtnCorner = Instance.new("UICorner")
+BtnCorner.CornerRadius = UDim.new(0, 8)
+BtnCorner.Parent = NextBtn
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 0, 0, 0)
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MainFrame.BorderSizePixel = 0
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Visible = false
+MainFrame.ClipsDescendants = true
+MainFrame.Parent = ScreenGui
+
+local MainCorner = Instance.new("UICorner")
+MainCorner.CornerRadius = UDim.new(0, 15)
+MainCorner.Parent = MainFrame
+
+local MainTitle = Instance.new("TextLabel")
+MainTitle.Size = UDim2.new(1, 0, 0, 30)
+MainTitle.Position = UDim2.new(0, 0, 0, 8)
+MainTitle.BackgroundTransparency = 1
+MainTitle.Text = "Setting"
+MainTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainTitle.TextSize = 20
+MainTitle.Font = Enum.Font.GothamBold
+MainTitle.Parent = MainFrame
+
+local Scroll = Instance.new("ScrollingFrame")
+Scroll.Size = UDim2.new(1, -20, 1, -80)
+Scroll.Position = UDim2.new(0, 10, 0, 40)
+Scroll.BackgroundTransparency = 1
+Scroll.BorderSizePixel = 0
+Scroll.CanvasSize = UDim2.new(0, 0, 0, 360)
+Scroll.ScrollBarThickness = 3
+Scroll.Parent = MainFrame
+
+local UIList = Instance.new("UIListLayout")
+UIList.Parent = Scroll
+UIList.SortOrder = Enum.SortOrder.LayoutOrder
+UIList.Padding = UDim.new(0, 8)
+
+local function makeCorner(obj, r)
+    local c = Instance.new("UICorner")
+    c.CornerRadius = UDim.new(0, r or 6)
+    c.Parent = obj
+end
+
+local IdBox = Instance.new("TextBox")
+IdBox.Size = UDim2.new(1, -10, 0, 28)
+IdBox.PlaceholderText = "ضع ID لاعبك"
+IdBox.Text = ""
+IdBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+IdBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+IdBox.Font = Enum.Font.Gotham
+IdBox.TextSize = 12
+IdBox.LayoutOrder = 1
+IdBox.Parent = Scroll
+makeCorner(IdBox)
+
+local IdBtn = Instance.new("TextButton")
+IdBtn.Size = UDim2.new(1, -10, 0, 26)
+IdBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+IdBtn.Text = "Fix Appearance ID"
+IdBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+IdBtn.Font = Enum.Font.GothamBold
+IdBtn.TextSize = 12
+IdBtn.LayoutOrder = 2
+IdBtn.Parent = Scroll
+makeCorner(IdBtn)
+
+local TimeContainer = Instance.new("Frame")
+TimeContainer.Size = UDim2.new(1, -10, 0, 28)
+TimeContainer.BackgroundTransparency = 1
+TimeContainer.LayoutOrder = 3
+TimeContainer.Parent = Scroll
+
+local HoursBox = Instance.new("TextBox")
+HoursBox.Size = UDim2.new(0.48, 0, 1, 0)
+HoursBox.Position = UDim2.new(0, 0, 0, 0)
+HoursBox.PlaceholderText = "ضع الساعات"
+HoursBox.Text = ""
+HoursBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+HoursBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+HoursBox.Font = Enum.Font.Gotham
+HoursBox.TextSize = 11
+HoursBox.Parent = TimeContainer
+makeCorner(HoursBox)
+
+local MinsBox = Instance.new("TextBox")
+MinsBox.Size = UDim2.new(0.48, 0, 1, 0)
+MinsBox.Position = UDim2.new(0.52, 0, 0, 0)
+MinsBox.PlaceholderText = "ضع الدقائق"
+MinsBox.Text = ""
+MinsBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MinsBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinsBox.Font = Enum.Font.Gotham
+MinsBox.TextSize = 11
+MinsBox.Parent = TimeContainer
+makeCorner(MinsBox)
+
+local TimeBtn = Instance.new("TextButton")
+TimeBtn.Size = UDim2.new(1, -10, 0, 26)
+TimeBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TimeBtn.Text = "تطبيق التزوير"
+TimeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimeBtn.Font = Enum.Font.GothamBold
+TimeBtn.TextSize = 12
+TimeBtn.LayoutOrder = 4
+TimeBtn.Parent = Scroll
+makeCorner(TimeBtn)
+
+local selectedPlayer = nil
+local SelectPlayerBtn = Instance.new("TextButton")
+SelectPlayerBtn.Size = UDim2.new(1, -10, 0, 28)
+SelectPlayerBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+SelectPlayerBtn.Text = "اختر لاعب من السيرفر..."
+SelectPlayerBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelectPlayerBtn.Font = Enum.Font.Gotham
+SelectPlayerBtn.TextSize = 12
+SelectPlayerBtn.LayoutOrder = 5
+SelectPlayerBtn.Parent = Scroll
+makeCorner(SelectPlayerBtn)
+
+local PlayersHolder = Instance.new("ScrollingFrame")
+PlayersHolder.Size = UDim2.new(1, -10, 0, 100)
+PlayersHolder.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+PlayersHolder.BorderSizePixel = 0
+PlayersHolder.Visible = false
+PlayersHolder.LayoutOrder = 6
+PlayersHolder.ScrollBarThickness = 4
+PlayersHolder.ScrollingDirection = Enum.ScrollingDirection.Y
+PlayersHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
+PlayersHolder.AutomaticCanvasSize = Enum.AutomaticSize.Y
+PlayersHolder.Parent = Scroll
+makeCorner(PlayersHolder)
+
+local PlayersListLayout = Instance.new("UIListLayout")
+PlayersListLayout.Parent = PlayersHolder
+PlayersListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+PlayersListLayout.Padding = UDim.new(0, 4)
+
+local PlayersPadding = Instance.new("UIPadding")
+PlayersPadding.PaddingTop = UDim.new(0, 4)
+PlayersPadding.PaddingBottom = UDim.new(0, 4)
+PlayersPadding.PaddingLeft = UDim.new(0, 4)
+PlayersPadding.PaddingRight = UDim.new(0, 4)
+PlayersPadding.Parent = PlayersHolder
+
+local function refreshPlayerList()
+    for _, child in ipairs(PlayersHolder:GetChildren()) do
+        if child:IsA("TextButton") then
+            child:Destroy()
+        end
+    end
+    for _, p in ipairs(Players:GetPlayers()) do
+        local pBtn = Instance.new("TextButton")
+        pBtn.Size = UDim2.new(1, -8, 0, 24)
+        pBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+        pBtn.BorderSizePixel = 0
+        if p.DisplayName ~= p.Name then
+            pBtn.Text = p.DisplayName .. "  @" .. p.Name
+        else
+            pBtn.Text = p.Name
+        end
+        pBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        pBtn.Font = Enum.Font.Gotham
+        pBtn.TextSize = 11
+        pBtn.TextTruncate = Enum.TextTruncate.AtEnd
+        pBtn.Parent = PlayersHolder
+        makeCorner(pBtn, 4)
+        pBtn.MouseButton1Click:Connect(function()
+            selectedPlayer = p
+            SelectPlayerBtn.Text = "اللاعب المحدد: " .. p.Name
+            PlayersHolder.Visible = false
+            PlayersHolder.CanvasPosition = Vector2.new(0, 0)
+        end)
+    end
+    task.defer(function()
+        PlayersHolder.CanvasSize = UDim2.new(
+            0,
+            0,
+            0,
+            PlayersListLayout.AbsoluteContentSize.Y + 8
+        )
+    end)
+end
+
+SelectPlayerBtn.MouseButton1Click:Connect(function()
+    PlayersHolder.Visible = not PlayersHolder.Visible
+    if PlayersHolder.Visible then
+        refreshPlayerList()
+    end
+end)
+
+Players.PlayerAdded:Connect(function()
+    if PlayersHolder.Visible then
+        refreshPlayerList()
+    end
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    if selectedPlayer == player then
+        selectedPlayer = nil
+        SelectPlayerBtn.Text = "اختر لاعب من السيرفر..."
+    end
+    if PlayersHolder.Visible then
+        task.defer(refreshPlayerList)
+    end
+end)
+
+local HideNameBtn = Instance.new("TextButton")
+HideNameBtn.Size = UDim2.new(1, -10, 0, 26)
+HideNameBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+HideNameBtn.Text = "إخفاء اسم اللاعب المحدد"
+HideNameBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideNameBtn.Font = Enum.Font.GothamBold
+HideNameBtn.TextSize = 12
+HideNameBtn.LayoutOrder = 7
+HideNameBtn.Parent = Scroll
+makeCorner(HideNameBtn)
+
+local FakeCtrlBtn = Instance.new("TextButton")
+FakeCtrlBtn.Size = UDim2.new(1, -10, 0, 26)
+FakeCtrlBtn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+FakeCtrlBtn.Text = "Fake Control للـمحدد"
+FakeCtrlBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+FakeCtrlBtn.Font = Enum.Font.GothamBold
+FakeCtrlBtn.TextSize = 12
+FakeCtrlBtn.LayoutOrder = 8
+FakeCtrlBtn.Parent = Scroll
+makeCorner(FakeCtrlBtn)
+
+local HideBtn = Instance.new("TextButton")
+HideBtn.Size = UDim2.new(0, 100, 0, 28)
+HideBtn.Position = UDim2.new(0.5, -50, 1, -34)
+HideBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+HideBtn.Text = "أخفاء"
+HideBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideBtn.TextSize = 14
+HideBtn.Font = Enum.Font.GothamBold
+HideBtn.Parent = MainFrame
+makeCorner(HideBtn, 8)
+
+local ASButton = Instance.new("TextButton")
+ASButton.Size = UDim2.new(0, 45, 0, 45)
+ASButton.Position = UDim2.new(0.1, 0, 0.1, 0)
+ASButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ASButton.BorderSizePixel = 0
+ASButton.Text = "AS"
+ASButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ASButton.TextSize = 18
+ASButton.Font = Enum.Font.GothamBold
+ASButton.Active = true
+ASButton.Draggable = true
+ASButton.Visible = false
+ASButton.Parent = ScreenGui
+makeCorner(ASButton, 10)
+
+IdBtn.MouseButton1Click:Connect(function()
+    local TargetID = tonumber(IdBox.Text)
+    if TargetID then
+        local oldIndex
+        oldIndex = hookmetamethod(game, "__index", function(self, index)
+            if self == LocalPlayer then
+                if index == "UserId"
+                    or index == "userId"
+                    or index == "CharacterAppearanceId"
+                    or index == "AppearanceId" then
+                    return TargetID
+                end
+            end
+            return oldIndex(self, index)
+        end)
+        IdBtn.Text = "تم التثبيت!"
+        task.wait(1)
+        IdBtn.Text = "Fix Appearance ID"
+    end
+end)
+
+if not getgenv().TimeHooked then
+    getgenv().OriginalTime = time
+    getgenv().OriginalWorkspace = workspace
+    getgenv().AddedSeconds = 0
+    time = function()
+        return getgenv().OriginalTime() + getgenv().AddedSeconds
+    end
+    local fakeWorkspace = setmetatable({}, {
+        __index = function(t, key)
+            if key == "DistributedGameTime" then
+                return getgenv().OriginalWorkspace.DistributedGameTime
+                    + getgenv().AddedSeconds
+            end
+            return getgenv().OriginalWorkspace[key]
+        end,
+        __newindex = function(t, key, value)
+            getgenv().OriginalWorkspace[key] = value
+        end
+    })
+    getgenv().workspace = fakeWorkspace
+    pcall(function()
+        getgenv().game.Workspace = fakeWorkspace
+    end)
+    getgenv().TimeHooked = true
+end
+
+TimeBtn.MouseButton1Click:Connect(function()
+    local hours = tonumber(HoursBox.Text) or 0
+    local minutes = tonumber(MinsBox.Text) or 0
+    getgenv().AddedSeconds =
+        (hours * 3600) +
+        (minutes * 60)
+    TimeBtn.Text = "تم التحديث!"
+    task.wait(1)
+    TimeBtn.Text = "تطبيق التزوير"
+end)
+
+HideNameBtn.MouseButton1Click:Connect(function()
+    if selectedPlayer and selectedPlayer.Character then
+        local hum = selectedPlayer.Character:FindFirstChildOfClass("Humanoid")
+        if hum then
+            hum.DisplayDistanceType =
+                Enum.HumanoidDisplayDistanceType.None
+        end
+        for _, v in ipairs(selectedPlayer.Character:GetDescendants()) do
+            if v:IsA("BillboardGui") or v:IsA("SurfaceGui") then
+                v.Enabled = false
+            end
+        end
+        HideNameBtn.Text = "تم إخفاء الاسم!"
+        task.wait(1)
+        HideNameBtn.Text = "إخفاء اسم اللاعب المحدد"
+    end
+end)
+
+FakeCtrlBtn.MouseButton1Click:Connect(function()
+    if selectedPlayer and selectedPlayer.Character then
+        local hum =
+            selectedPlayer.Character:FindFirstChildOfClass("Humanoid")
+        if hum then
+            workspace.CurrentCamera.CameraSubject = hum
+            FakeCtrlBtn.Text = "تم التفعيل!"
+            task.wait(1)
+            FakeCtrlBtn.Text = "Fake Control للـمحدد"
+        end
+    end
+end)
+
+TweenService:Create(
+    IntroFrame,
+    tweenInfo,
+    {
+        Size = UDim2.new(0, 250, 0, 250)
+    }
+):Play()
+
+NextBtn.MouseButton1Click:Connect(function()
+    IntroFrame:Destroy()
+    MainFrame.Visible = true
+    TweenService:Create(
+        MainFrame,
+        tweenInfo,
+        {
+            Size = UDim2.new(0, 260, 0, 290)
+        }
+    ):Play()
+end)
+
+HideBtn.MouseButton1Click:Connect(function()
+    MainFrame.Visible = false
+    ASButton.Visible = true
+end)
+
+ASButton.MouseButton1Click:Connect(function()
+    ASButton.Visible = false
+    MainFrame.Visible = true
+    MainFrame.Size = UDim2.new(0, 0, 0, 0)
+    TweenService:Create(
+        MainFrame,
+        tweenInfo,
+        {
+            Size = UDim2.new(0, 260, 0, 290)
+        }
+    ):Play()
+end)
